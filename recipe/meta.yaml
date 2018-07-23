@@ -34,7 +34,7 @@ requirements:
     - r-reshape2
   run:
     - r-base
-    - libgfortran-ng   # [not win]
+    - libgfortran          # [not win]
     - {{native}}gcc-libs   # [win]
     - r-ggplot2
     - r-gmp
