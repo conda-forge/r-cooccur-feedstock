@@ -29,6 +29,7 @@ requirements:
     - {{posix}}filesystem    # [win]
   host:
     - r-base
+    - libgfortran          # [not win]
     - r-ggplot2
     - r-gmp
     - r-reshape2
