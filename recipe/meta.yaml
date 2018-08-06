@@ -29,13 +29,11 @@ requirements:
     - {{posix}}filesystem    # [win]
   host:
     - r-base
-    - libgfortran          # [not win]
     - r-ggplot2
     - r-gmp
     - r-reshape2
   run:
     - r-base
-    - libgfortran          # [not win]
     - {{native}}gcc-libs   # [win]
     - r-ggplot2
     - r-gmp
