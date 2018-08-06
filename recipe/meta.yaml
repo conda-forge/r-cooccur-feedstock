@@ -16,7 +16,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -24,6 +24,9 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}    # [not win]
+    - {{native}}toolchain    # [win]
+    - {{posix}}filesystem    # [win]
   host:
     - r-base
     - r-ggplot2
@@ -31,6 +34,7 @@ requirements:
     - r-reshape2
   run:
     - r-base
+    - {{native}}gcc-libs   # [win]
     - r-ggplot2
     - r-gmp
     - r-reshape2
